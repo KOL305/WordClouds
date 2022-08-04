@@ -11,3 +11,4 @@ wordcloud
 pandas
 matplotlib
 numpy
+adjustText

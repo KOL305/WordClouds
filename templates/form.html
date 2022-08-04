@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<style>
+    body{
+        background-image: url("../static/images/bg.jpeg");
+    }
+    h1{
+        background-color: #0c7ed0c4;
+        color:white; 
+    }
+</style>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="myNotes.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Forms</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark" style="background-color: #09568d">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="../static/images/wordCloudLogo.png" width="30" height="25" class="d-inline-block align-text-top">
+                Word Cloud
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cloud">Python Package Word Cloud</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/cloudexp">Non Python Package Word Cloud</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/forms">Forms</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <h1 class="text-center" id="title">Forms</h1>
+        <div class="row">
+            <div class="col">
+                <input type="text" id="question" class="form-control" placeholder="Enter your question here" name="question" required>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary w-100" onclick = "getTheNote()">Add</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <select class="form-select" name="fonts" id="fonts">
+                    <option class="arial" value="arial">Arial</option>
+                    <option class="timesNewRoman" value="timesNewRoman">Times New Roman</option>
+                  </select>
+            </div>
+            <div class="col"></div>
+            <div class="col">
+                <label for="noteBackground">Question Background: </label><input type="color" value="#cccccc" id="noteBackground" class="ms-1" required>
+            </div>
+            <div class="col">
+                <label for="noteForeground">Question Foreground: </label><input type="color" id="noteForeground" class="ms-1" required>
+            </div>
+        </div>
+        <br>
+        <div id="cardPlace">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h2>What is your favorite book?</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="answer">Enter your response here: </label>
+                        <input type="text" id="answer" class="form-control" name="answer" required>
+                        <br>
+                        <button type="button" value="Submit" class="btn btn-primary w-100">Submit</button>
+                    </div>
+                    <div class="col-6">
+                        <img src="..\static\images\white.png" class="img-fluid rounded mx-auto d-block cloud" id = "img"> 
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src = "myNotesCopy.js">
+    
+    </script>
+  </body>
+</html>

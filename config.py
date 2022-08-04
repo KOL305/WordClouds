@@ -31,3 +31,4 @@ class Config:
         minutes=int(os.environ.get('SESSION_TIME')))
     SESSION_MONGODB = mongodb_sess
     SEND_FILE_MAX_AGE_DEFAULT = 60
+    UPLOAD_FOLDER = 'static\images'
