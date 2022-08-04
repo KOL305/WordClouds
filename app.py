@@ -6,9 +6,10 @@ from flask import Flask, render_template, jsonify, request, redirect, session, a
 from flask_session import Session
 from config import Config
 import wordcloud
-import matplotlib
-import pandas
-import numpy
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+from PIL import Image
 
 app = Flask("ATT Hackathon Project")
 app.config.from_object(Config)
@@ -26,16 +27,35 @@ def cloud():
     if request.method == 'GET':     
         return render_template('home.html')
     elif request.method == 'POST':
-        text = request.files['text']
-        mask = request.files['mask']
-        color = request.form['color']
-        textFile = open('%s.txt' % text, 'r')
-        print(textFile.read())
-        print("Color",color)
+        textInput = request.files['text']
+        maskInput = request.files['mask']
+        colorInput = request.form['color']
 
-        data = io.BytesIO()
+        textFile = open('%s.txt' % textInput, 'r')
+        text = textFile.read()
+        print(text)
+        textFile.close()
+        print("Color",colorInput)
+
+        mask = np.array(maskInput)
+
+        wc = wordcloud.WordCloud(background_color="white",
+        stopwords=wordcloud.STOPWORDS,
+        mask=mask,
+        width=mask.shape[1],
+        height=mask.shape[0])
+        wc.generate(text, collocations=False)
+        
+        img = io.BytesIO()
+        plt.imshow(wc, interpolation="bilinear")
+        plt.axis('off')
+        plt.savefig(img, format='png')
+        plt.close()
+        img.seek(0)
+        
         base64_string = "data:image/png;base64," + \
-        str(base64.b64encode(mask.read()).decode('utf-8'))
+        str(base64.b64encode(img.getvalue()).decode('utf-8'))
+        print("b64",base64_string)
         return {"filename": base64_string}
 
 @app.route('/cloudexp', methods=['GET','POST'])
