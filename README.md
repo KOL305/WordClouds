@@ -1,4 +1,6 @@
 # ATTHackathonProject
+Description:
+- Web-based custom word cloud builder created during the 2022 AT&T Labs Junior Hackathon (2nd Place Winner)
 
 Pre-requisites:
 - MongoDB Compass Installed
