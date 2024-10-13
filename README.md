@@ -24,7 +24,7 @@ Awarded 2nd Place for our unique customization settings for users
 ### Importing Application:
 1. Open up terminal
 2. Go to the chosen directory where you want the project located
-3. Enter in terminal/code editor: git clone https://github.com/KOL305/ATTHackathonProject
+3. Enter in terminal/code editor: git clone https://github.com/KOL305/WordClouds
 4. Open up your project in a code editor
 
 ### Setting up Virtual Environment:
