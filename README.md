@@ -3,7 +3,7 @@
 Web-based custom word cloud builder created during the 2022 AT&T Labs Junior Hackathon (2nd Place Winner)
 
 ## AT&T Labs Junior Hackathon:
-Two day event, with tours of AT&T labs covering 5G and data storage technology on the first day and a programming challenge on the second day.
+Two day event, with tours of AT&T labs covering 5G and data storage technology on the first day, programming challenge on the second day.
 
 ### Challenge
 Given 4.5 hours with a random group of 3 people, create a word cloud generator using any language.
