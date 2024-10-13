@@ -1,4 +1,4 @@
-# WordClouds
+# WordCloud
 ## Description:
 Web-based custom word cloud builder created during the 2022 AT&T Labs Junior Hackathon (2nd Place Winner)
 
@@ -24,7 +24,7 @@ Awarded 2nd Place for our unique customization settings for users
 ### Importing Application:
 1. Open up terminal
 2. Go to the chosen directory where you want the project located
-3. Enter in terminal/code editor: git clone https://github.com/KOL305/WordClouds
+3. Enter in terminal/code editor: git clone https://github.com/KOL305/word-cloud
 4. Open up your project in a code editor
 
 ### Setting up Virtual Environment:
